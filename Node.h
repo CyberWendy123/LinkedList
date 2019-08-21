@@ -8,12 +8,25 @@
 #define NODE_H_ 
 
 #include <iostream> 
+#include <string> 
 using namespace std; 
 
 class Node{
-public: 
-	int data; 
-	Node *next; 
+	public: 
+		Node(); 
+		Node(const string&); //with string 
+		//Node(const Node&); //with node 
+		//Node(const string&, Node*); //with both 
+		~Node(); 
+
+		void setData(const string); 
+		string getData(); 
+		void setNext(Node* newNext); 
+		Node* getNext(); 
+
+	private: 
+		string data; 
+		Node *next; 
 
 }; 
 
